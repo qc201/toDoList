@@ -9,9 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+  
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="./firebase.js"></script>
     <script src="./script.js"></script>
+    
 </head>
 <body>
+    
     <div class="background-image">
         <img src="./background_coffee.jpeg" >
     </div>
@@ -21,7 +28,79 @@
                 TODO
             </div>
             <div class="theme">
-                <img src="./img_sun.png">
+                <img src="./img_sun.png" width="30" height="30">
+
+            </div>
+        </div>
+        <div class="new-todo">
+            <div class="check">
+                <div class="check-mark">
+
+                </div>
+            </div>
+            <div class="new-todo-input">
+                <form onsubmit="addItem(event)">
+                    <input id="todo-input" type="text" placeholder="Create a new todo."/>
+                </form>
+
+            </div>
+
+        </div>
+        <div class="todo-items-wrapper">
+            <div class="todo-items">
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            <img src="./checkmark-solid.png" width="20" height="20">
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                        Cut the lawn
+
+                    </div>
+
+                </div>
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            <img src="./checkmark-solid.png" width="20" height="20">
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                        Cut the lawn
+
+                    </div>
+
+                </div>
+                <div class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            <img src="./checkmark-solid.png" width="20" height="20">
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                        Cut the lawn
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="todo-items-info">
+                <div class="items-left">
+                    5items
+
+                </div>
+                <div class="items-statuses">
+                    <span class="active">ALL</span>
+                    <span>Active</span>
+                    <span>Completed</span>
+
+                </div>
+                <div class="items-clear">
+                    <span>Clear Completed</span>
+
+                </div>
 
             </div>
 
