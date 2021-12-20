@@ -82,7 +82,7 @@ body {
     justify-content: center;
 }
 
-.check-mark:hover {
+.check-mark:hover, .check-mark.checked {
     border-color: linear-gradient(135deg, #55DDFF, #C058F3 100%);
     background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
 
@@ -173,4 +173,16 @@ body {
     cursor: pointer;
     text-align: end;
 
+}
+
+.todo-text.checked {
+    text-decoration: line-through;
+    color:hsl(233, 14%, 35%);
+}
+
+.check-mark img {
+    visibility: hidden;
+}
+.check-mark:hover img, .check-mark.checked img {
+    visibility: visible;
 }
